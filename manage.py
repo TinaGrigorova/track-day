@@ -16,6 +16,11 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+class Track(models.Model):
+    name = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    length_km = models.DecimalField(max_digits=5, decimal_places=2)
+
 
 if __name__ == "__main__":
     main()
