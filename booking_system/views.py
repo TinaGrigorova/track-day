@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import BookingForm
 
+def index(request):
+    return render(request, 'booking_system/index.html')
+
 def book_track(request):
     """
     Displays and processes the booking form.
