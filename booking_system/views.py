@@ -1,14 +1,15 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
+from .models import Booking
+
 
 def index(request):
     return render(request, 'booking_system/index.html')
 
 def my_bookings(request):
     """
-    
     Display all bookings for the logged-in user.
     """
     bookings = request.user.bookings.all()
@@ -34,3 +35,15 @@ def booking_success(request):
     Simple success page after booking.
     """
     return render(request, 'booking_system/booking_success.html')
+
+@login_required
+def cancel_booking(request, booking_id):
+    """
+    Allows the user to cancel their booking.
+    """
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    if request.method == 'POST':
+        booking.delete()
+        messages.success(request, 'Your booking has been cancelled.')
+        return redirect('my_bookings')
+    return render(request, 'booking_system/cancel_booking.html', {'booking': booking})

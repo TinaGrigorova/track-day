@@ -9,6 +9,9 @@
                 Time Slot: {{ booking.time_slot }} <br>
                 Car: {{ booking.car.brand }} {{ booking.car.model }}
             </li>
+            <form action="{% url 'cancel_booking' booking.id %}" method="GET" style="display:inline;">
+                <button type="submit">Cancel</button>
+            </form>
             <hr>
         {% endfor %}
     </ul>
