@@ -24,5 +24,8 @@ urlpatterns = [
     path('booking/', include('booking_system.urls')),
     path('', booking_views.index, name='index'),
     path('about/', include('about.urls')), 
+    path('admin/', admin.site.urls),
+    path('booking/', include('booking_system.urls')),
 ]
+
 

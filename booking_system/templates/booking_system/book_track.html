@@ -1,0 +1,7 @@
+<h2>Book Track Day</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book Now</button>
+</form>
