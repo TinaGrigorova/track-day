@@ -1,9 +1,17 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import BookingForm
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, 'booking_system/index.html')
+
+def my_bookings(request):
+    """
+    Display all bookings for the logged-in user.
+    """
+    bookings = request.user.bookings.all()
+    return render(request, 'booking_system/my_bookings.html', {'bookings': bookings})
 
 def book_track(request):
     """
