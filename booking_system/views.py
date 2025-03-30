@@ -8,6 +8,7 @@ def index(request):
 
 def my_bookings(request):
     """
+    
     Display all bookings for the logged-in user.
     """
     bookings = request.user.bookings.all()
