@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from .models import Booking
+from django.contrib import messages
 
 
 def index(request):
