@@ -1,21 +1,24 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse
-from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
-from .models import Booking
 from django.contrib import messages
-
+from .forms import BookingForm
+from .models import Booking
 
 def index(request):
+    """
+    Homepage view.
+    """
     return render(request, 'booking_system/index.html')
 
+@login_required
 def my_bookings(request):
     """
     Display all bookings for the logged-in user.
     """
-    bookings = request.user.bookings.all()
+    bookings = Booking.objects.filter(user=request.user)
     return render(request, 'booking_system/my_bookings.html', {'bookings': bookings})
 
+@login_required
 def book_track(request):
     """
     Displays and processes the booking form.
@@ -24,16 +27,18 @@ def book_track(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
-            booking.user = request.user  # Assign the logged-in user
+            booking.user = request.user
             booking.save()
-            return redirect('booking_success')
+            messages.success(request, 'Your track day has been booked successfully!')
+            return redirect('my_bookings')
     else:
         form = BookingForm()
     return render(request, 'booking_system/book_track.html', {'form': form})
 
+@login_required
 def booking_success(request):
     """
-    Simple success page after booking.
+    Success page after booking.
     """
     return render(request, 'booking_system/booking_success.html')
 

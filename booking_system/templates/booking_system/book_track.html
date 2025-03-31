@@ -1,7 +1,39 @@
-<h2>Book Track Day</h2>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Book Now</button>
-</form>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Track Day</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'booking_system/images/favicon.ico' %}">
+    <link href="{% static 'booking_system/css/styles.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    {% include 'booking_system/navbar.html' %}
+
+    <section class="py-5">
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Book a Track Day</h2>
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-info">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+
+            <form method="POST" class="mx-auto" style="max-width: 500px;">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Book Now</button>
+                <a href="{% url 'booking_index' %}" class="btn btn-secondary">Back</a>
+            </form>
+        </div>
+    </section>
+
+    {% include 'booking_system/footer.html' %}
+    <script src="{% static 'booking_system/js/scripts.js' %}"></script>
+</body>
+
+</html>
