@@ -1,38 +1,38 @@
 {% extends 'booking_system/base.html' %}
 
 {% block content %}
-<div class="container my-5">
-    <h2 class="text-center mb-4">My Bookings</h2>
-    {% if bookings %}
-    <table class="table table-bordered text-center">
-        <thead class="table-dark">
-            <tr>
-                <th>Track</th>
-                <th>Date</th>
-                <th>Time Slot</th>
-                <th>Car</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for booking in bookings %}
-            <tr>
-                <td>{{ booking.track.name }}</td>
-                <td>{{ booking.date }}</td>
-                <td>{{ booking.time_slot }}</td>
-                <td>{{ booking.car }}</td>
-                <td>
-                    <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-danger">Cancel</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <p class="text-center">You have no bookings.</p>
-    {% endif %}
-    <div class="text-center mt-4">
-        <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
+<section class="py-5 text-center">
+    <div class="container">
+        <h1 class="mb-4">My Bookings</h1>
+        {% if bookings %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Track</th>
+                        <th>Date</th>
+                        <th>Time Slot</th>
+                        <th>Car</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in bookings %}
+                    <tr>
+                        <td>{{ booking.track }}</td>
+                        <td>{{ booking.date }}</td>
+                        <td>{{ booking.time_slot }}</td>
+                        <td>{{ booking.car }}</td>
+                        <td>
+                            <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-danger btn-sm">Cancel</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>You have no bookings yet.</p>
+        {% endif %}
+        <a href="{% url 'booking_index' %}" class="btn btn-secondary mt-3">Back</a>
     </div>
-</div>
+</section>
 {% endblock %}
