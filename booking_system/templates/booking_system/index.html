@@ -1,10 +1,48 @@
 {% extends 'booking_system/base.html' %}
 
 {% block content %}
-<div class="container text-center my-5">
-    <h1>Welcome to Track Day Booking</h1>
-    <p>Book your next track day easily.</p>
-    <a href="{% url 'book_track' %}" class="btn btn-primary m-2">Book Now</a>
-    <a href="{% url 'my_bookings' %}" class="btn btn-secondary m-2">My Bookings</a>
-</div>
+<!-- Hero Image -->
+<header class="py-5 bg-dark text-white text-center" style="background-image: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h1 class="display-4">Track Day Booking</h1>
+    </div>
+</header>
+
+<!-- Track Cards -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Track 1</h5>
+                    <p>Lydden Hill</p>
+                    <p>Some text about the track...</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Track 2</h5>
+                    <p>Brands Hatch</p>
+                    <p>Some text about the track...</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Track 3</h5>
+                    <p>Some Track</p>
+                    <p>Some text about the track...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Info Section -->
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <h2>Track Day</h2>
+        <p class="lead">Book your adventure with us, choose from a wide range of cars and tracks.</p>
+        <p>Some text .......</p>
+    </div>
+</section>
 {% endblock %}
