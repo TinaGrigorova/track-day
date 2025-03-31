@@ -1,3 +1,10 @@
-<h2>Booking Successful!</h2>
-<p>Your booking has been recorded.</p>
-<a href="/booking/book/">Make another booking</a>
+{% extends 'booking_system/base.html' %}
+
+{% block content %}
+<div class="container text-center my-5">
+    <h2>Booking Successful!</h2>
+    <p>Your track day booking has been confirmed.</p>
+    <a href="{% url 'index' %}" class="btn btn-primary m-2">Back to Home</a>
+    <a href="{% url 'my_bookings' %}" class="btn btn-secondary m-2">View My Bookings</a>
+</div>
+{% endblock %}

@@ -1,64 +1,38 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'booking_system/base.html' %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Bookings</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'booking_system/images/favicon.ico' %}">
-    <link href="{% static 'booking_system/css/styles.css' %}" rel="stylesheet">
-</head>
-
-<body>
-    {% include 'booking_system/navbar.html' %}
-
-    <section class="py-5">
-        <div class="container my-5">
-            <h2 class="text-center mb-4">My Bookings</h2>
-
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-success">{{ message }}</div>
-                {% endfor %}
-            {% endif %}
-
-            {% if bookings %}
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Track</th>
-                            <th>Date</th>
-                            <th>Time Slot</th>
-                            <th>Car</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for booking in bookings %}
-                            <tr>
-                                <td>{{ booking.track }}</td>
-                                <td>{{ booking.date }}</td>
-                                <td>{{ booking.time_slot }}</td>
-                                <td>{{ booking.car }}</td>
-                                <td>
-                                    <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-danger btn-sm">Cancel</a>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            {% else %}
-                <p class="text-center">You have no bookings yet.</p>
-            {% endif %}
-            <div class="text-center mt-4">
-                <a href="{% url 'booking_index' %}" class="btn btn-secondary">Back</a>
-            </div>
-        </div>
-    </section>
-
-    {% include 'booking_system/footer.html' %}
-    <script src="{% static 'booking_system/js/scripts.js' %}"></script>
-</body>
-
-</html>
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">My Bookings</h2>
+    {% if bookings %}
+    <table class="table table-bordered text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Track</th>
+                <th>Date</th>
+                <th>Time Slot</th>
+                <th>Car</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.track.name }}</td>
+                <td>{{ booking.date }}</td>
+                <td>{{ booking.time_slot }}</td>
+                <td>{{ booking.car }}</td>
+                <td>
+                    <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-danger">Cancel</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-center">You have no bookings.</p>
+    {% endif %}
+    <div class="text-center mt-4">
+        <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
+    </div>
+</div>
+{% endblock %}
