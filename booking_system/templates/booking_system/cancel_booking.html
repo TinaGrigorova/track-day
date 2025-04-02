@@ -1,14 +1,15 @@
 {% extends 'booking_system/base.html' %}
 
 {% block content %}
-<div class="container my-5 text-center">
-    <h2>Cancel Booking</h2>
-    <p>Are you sure you want to cancel your booking for {{ booking.track.name }} on {{ booking.date }} at {{ booking.time_slot }}?</p>
-
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger m-2">Yes, Cancel Booking</button>
-        <a href="{% url 'my_bookings' %}" class="btn btn-secondary m-2">No, go back</a>
-    </form>
-</div>
+<section class="py-5 text-center">
+    <div class="container">
+        <h1 class="mb-4">Cancel Booking</h1>
+        <p>Are you sure you want to cancel your booking for {{ booking.track }} on {{ booking.date }} at {{ booking.time_slot }}?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Yes, Cancel Booking</button>
+            <a href="{% url 'my_bookings' %}" class="btn btn-secondary">No, go back</a>
+        </form>
+    </div>
+</section>
 {% endblock %}

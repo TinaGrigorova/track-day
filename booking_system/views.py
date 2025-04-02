@@ -3,6 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import BookingForm
 from .models import Booking
+from .forms import UserRegisterForm
+from django.contrib.auth import login
 
 def index(request):
     """
@@ -53,3 +55,15 @@ def cancel_booking(request, booking_id):
         messages.success(request, 'Your booking has been cancelled.')
         return redirect('my_bookings')
     return render(request, 'booking_system/cancel_booking.html', {'booking': booking})
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, 'Account created successfully! You can now manage your booking.')
+            return redirect('my_bookings')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'booking_system/register.html', {'form': form})

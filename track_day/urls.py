@@ -17,14 +17,17 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from booking_system import views as booking_views 
+from booking_system import views as booking_views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('booking/', include('booking_system.urls')),
     path('', booking_views.index, name='index'),
     path('about/', include('about.urls')),
-  
+
+    # Authentication URLs
+    path('login/', auth_views.LoginView.as_view(template_name='booking_system/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('signup/', booking_views.signup, name='signup'), 
 ]
-
-

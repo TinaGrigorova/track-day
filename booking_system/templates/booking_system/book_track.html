@@ -1,15 +1,32 @@
 {% extends 'booking_system/base.html' %}
 
 {% block content %}
-<div class="container my-5">
-    <h2 class="text-center mb-4">Book a Track Day</h2>
-    <form method="post" class="mx-auto" style="max-width: 400px;">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="d-flex justify-content-between">
-            <button type="submit" class="btn btn-primary">Book Now</button>
-            <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
-        </div>
-    </form>
-</div>
+<section class="py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Book a Track Day</h1>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-info text-center">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="post" class="w-50 mx-auto">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="mb-3">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="text-danger">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-primary">Book Now</button>
+                <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
+            </div>
+        </form>
+    </div>
+</section>
 {% endblock %}
