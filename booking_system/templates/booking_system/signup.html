@@ -1,0 +1,15 @@
+{% extends 'booking_system/base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center">Create an Account</h2>
+    <form method="post" class="mt-4 w-50 mx-auto">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+    </form>
+    <div class="text-center mt-3">
+        <p>Already have an account? <a href="{% url 'login' %}">Log In</a></p>
+    </div>
+</div>
+{% endblock %}

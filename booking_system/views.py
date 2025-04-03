@@ -6,6 +6,7 @@ from .models import Booking
 from .forms import UserRegisterForm
 from django.contrib.auth import login
 
+
 def index(request):
     """
     Homepage view.
@@ -67,3 +68,18 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'booking_system/register.html', {'form': form})
+
+
+def signup(request):
+    """
+    Allows a user to register an account.
+    """
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)  # Automatically log in after signup
+            return redirect('booking_index')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'booking_system/signup.html', {'form': form})
