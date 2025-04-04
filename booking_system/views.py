@@ -5,6 +5,7 @@ from .forms import BookingForm
 from .models import Booking
 from .forms import UserRegisterForm
 from django.contrib.auth import login
+from django.shortcuts import render, redirect
 
 
 def index(request):
@@ -78,7 +79,7 @@ def signup(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)  # Automatically log in after signup
+            login(request, user)
             return redirect('booking_index')
     else:
         form = UserRegisterForm()

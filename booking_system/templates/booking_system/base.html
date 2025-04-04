@@ -26,21 +26,26 @@
                         <a class="nav-link" href="{% url 'index' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'book_track' %}">Book Track Day</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'my_bookings' %}">My Bookings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'admin:logout' %}">Log out</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'book_track' %}">Book Track Day</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'my_bookings' %}">My Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Log out</a>
+                        </li>
                     {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'admin:login' %}">Log in</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
+                        </li>
                     {% endif %}
                 </ul>
+                
+                
             </div>
         </div>
     </nav>

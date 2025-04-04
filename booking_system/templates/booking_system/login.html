@@ -1,0 +1,17 @@
+{% extends 'booking_system/base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="text-center mb-4">Log In</h2>
+
+    <form method="post" class="mx-auto" style="max-width: 400px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary w-100">Log In</button>
+    </form>
+
+    <div class="text-center mt-3">
+        <p>Don’t have an account? <a href="{% url 'signup' %}">Sign up</a></p>
+    </div>
+</div>
+{% endblock %}

@@ -25,6 +25,9 @@ urlpatterns = [
     path('booking/', include('booking_system.urls')),
     path('', booking_views.index, name='index'),
     path('about/', include('about.urls')),
+    path('login/', auth_views.LoginView.as_view(template_name='booking_system/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='index'), name='logout'),
+
 
     # Authentication URLs
     path('login/', auth_views.LoginView.as_view(template_name='booking_system/login.html'), name='login'),
