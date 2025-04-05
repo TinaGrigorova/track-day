@@ -14,17 +14,19 @@
     <div class="container">
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>
-                        <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
-                        Lydden Hill
-                      </h5>
-                    <p>
-                        Located near Canterbury in Kent, Lydden Hill is a legendary venue known as the birthplace of Rallycross.
-                        This short, fast circuit features a mix of tarmac and gravel, offering a thrilling challenge for all levels of drivers.
-                        Perfect for track days, drifting, and rallycross events, it’s a favorite among grassroots motorsport enthusiasts.
-                    </p>
-                </div>
+                <a href="{% url 'track_detail' 'lydden-hill' %}" class="text-decoration-none text-dark">
+                    <div class="card p-3 track-card h-100">
+                        <h5>
+                            <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
+                            Lydden Hill
+                        </h5>
+                        <p>
+                            Located near Canterbury in Kent, Lydden Hill is a legendary venue known as the birthplace of Rallycross.
+                            This short, fast circuit features a mix of tarmac and gravel, offering a thrilling challenge for all levels of drivers.
+                            Perfect for track days, drifting, and rallycross events, it’s a favorite among grassroots motorsport enthusiasts.
+                        </p>
+                    </div>
+                </a>
             </div>
             <div class="col-md-4">
                 <div class="card p-3">

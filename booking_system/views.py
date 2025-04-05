@@ -77,3 +77,8 @@ def cancel_booking(request, booking_id):
         messages.success(request, 'Your booking has been cancelled.')
         return redirect('my_bookings')
     return render(request, 'booking_system/cancel_booking.html', {'booking': booking})
+
+# Track Information & booking 
+
+def track_detail(request, track_slug):
+    return render(request, f'booking_system/tracks/{track_slug}.html')
