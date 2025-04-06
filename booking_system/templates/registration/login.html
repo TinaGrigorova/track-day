@@ -1,0 +1,25 @@
+{% extends 'booking_system/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    {% if not user.is_authenticated %}
+    <div class="alert alert-warning text-center mt-3">
+        <strong>Oh no!</strong> You need an account to book your experience. Please <a href="{% url 'signup' %}">sign up</a> or <a href="{% url 'login' %}">log in</a>.
+    </div>
+    {% endif %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mb-4 text-center">Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success">Log in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
