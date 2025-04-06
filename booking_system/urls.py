@@ -9,5 +9,6 @@ urlpatterns = [
     path('cancel/<int:booking_id>/', views.cancel_booking, name='cancel_booking'),
     path('signup/', views.signup, name='signup'),
     path('track/<slug:track_slug>/', views.track_detail, name='track_detail'),
+    path('tracks/lydden-hill/', views.lydden_hill, name='lydden_hill'),
 
 ]

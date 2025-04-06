@@ -82,3 +82,7 @@ def cancel_booking(request, booking_id):
 
 def track_detail(request, track_slug):
     return render(request, f'booking_system/tracks/{track_slug}.html')
+
+
+def lydden_hill(request):
+    return render(request, 'booking_system/tracks/lydden_hill.html')
