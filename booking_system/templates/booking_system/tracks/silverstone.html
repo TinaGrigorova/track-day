@@ -1,0 +1,21 @@
+{% extends 'booking_system/base.html' %}
+{% load static %}
+
+{% block content %}
+<header class="py-5 text-white text-center" style="background-image: url('{% static 'booking_system/images/lydden_hill_banner.jpg' %}'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h1 class="display-4">Lydden Hill</h1>
+    </div>
+</header>
+
+<section class="py-5 container">
+    <p>
+        Lydden Hill is located near Canterbury in Kent and is one of the oldest rallycross venues in the world.
+        This short yet fast circuit combines tarmac and gravel, making it a favorite among grassroots drivers and enthusiasts.
+    </p>
+    <a href="{% url 'book_track' %}" class="btn btn-primary mt-4">Book this Track</a>
+    <div class="mt-4">
+        <button class="btn btn-secondary" onclick="window.history.back()">← Go Back</button>
+      </div>      
+</section>
+{% endblock %}

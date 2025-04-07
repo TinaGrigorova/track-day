@@ -12,4 +12,6 @@ urlpatterns = [
     #path('logout/', views.custom_logout_view, name='logout'),
     path('track/<slug:track_slug>/', views.track_detail, name='track_detail'),
     path('tracks/lydden-hill/', views.lydden_hill, name='lydden_hill'),
+    path('tracks/brands-hatch/', views.brands_hatch, name='brands_hatch'),
+    path('tracks/silverstone/', views.silverstone, name='silverstone'),
 ]

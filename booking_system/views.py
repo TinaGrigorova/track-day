@@ -86,3 +86,9 @@ def track_detail(request, track_slug):
 
 def lydden_hill(request):
     return render(request, 'booking_system/tracks/lydden_hill.html')
+
+def brands_hatch(request):
+    return render(request, 'booking_system/tracks/brands_hatch.html')
+
+def silverstone(request):
+    return render(request, 'booking_system/tracks/silverstone.html')
