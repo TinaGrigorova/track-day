@@ -10829,6 +10829,7 @@ textarea.form-control-lg {
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
+  border-radius: 5px;
 }
 
 /*Track cards and track cards hoover*/
@@ -10841,4 +10842,22 @@ textarea.form-control-lg {
 .track-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*Gallery*/
+
+.gallery-img {
+  height: 292px;    
+  width: 100%;           
+  object-fit: cover;     
+  display: block;
+  border-radius: 0.5rem;  
+}
+
+.track-hero {
+  background-image: url('../images/lyddenhill-img.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  overflow: hidden;
 }
