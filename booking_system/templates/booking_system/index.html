@@ -13,6 +13,8 @@
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row g-4">
+
+            <!-- Lydden Hill -->
             <div class="col-md-4">
                 <a href="{% url 'track_detail' 'lydden-hill' %}" class="text-decoration-none text-dark">
                     <div class="card p-3 track-card h-100">
@@ -28,30 +30,40 @@
                     </div>
                 </a>
             </div>
+
+            <!-- Brands Hatch -->
             <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>
-                        <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
-                        Brands Hatch
-                    </h5>
-                    <p>
-                        One of the UK's most iconic circuits, Brands Hatch is set in the Kent countryside and offers an exhilarating experience 
-                        for both drivers and spectators. With its flowing corners and elevation changes, it's a favorite for touring cars, superbikes, 
-                        and track day events alike.
-                    </p>
-                </div>
+                <a href="{% url 'track_detail' 'brands-hatch' %}" class="text-decoration-none text-dark">
+                    <div class="card p-3 track-card h-100">
+                        <h5>
+                            <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
+                            Brands Hatch
+                        </h5>
+                        <p>
+                            One of the UK's most iconic circuits, Brands Hatch is set in the Kent countryside and offers an exhilarating experience 
+                            for both drivers and spectators. With its flowing corners and elevation changes, it's a favorite for touring cars, superbikes, 
+                            and track day events alike.
+                        </p>
+                    </div>
+                </a>
             </div>
+
+            <!-- Silverstone Circuit -->
             <div class="col-md-4">
-                <div class="card p-3">
-                    <h5>
-                        <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
-                        Silverstone Circuit
-                    </h5>
-                    <p>
-                        Known as the home of British motorsport, Silverstone is the UK's premier racing venue and host of the British Grand Prix.
-                        This world-famous circuit offers top-tier facilities and a variety of layouts, ideal for high-speed track days and advanced driver experiences.
-                    </p>
+                <a href="{% url 'track_detail' 'silverstone' %}" class="text-decoration-none text-dark">
+                    <div class="card p-3 track-card h-100">
+                        <h5>
+                            <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
+                            Silverstone Circuit
+                        </h5>
+                        <p>
+                            Known as the home of British motorsport, Silverstone is the UK's premier racing venue and host of the British Grand Prix.
+                            This world-famous circuit offers top-tier facilities and a variety of layouts, ideal for high-speed track days and advanced driver experiences.
+                        </p>
+                    </div>
+                </a>
             </div>
+
         </div>
     </div>
 </section>

@@ -2,20 +2,56 @@
 {% load static %}
 
 {% block content %}
-<header class="py-5 text-white text-center" style="background-image: url('{% static 'booking_system/images/lydden_hill_banner.jpg' %}'); background-size: cover; background-position: center;">
+<!-- Custom Hero with Lydden Hill Background -->
+<header class="py-5 text-white text-center" style="background-image: url('{% static 'booking_system/images/lyddenhill-img.png' %}'); background-size: cover; background-position: center;">
     <div class="container">
-        <h1 class="display-4">Lydden Hill</h1>
+        <h1 class="display-4 fw-bold">Lydden Hill Circuit</h1>
+        <p class="lead">Feel the thrill where Rallycross was born</p>
     </div>
 </header>
 
-<section class="py-5 container">
-    <p>
-        Lydden Hill is located near Canterbury in Kent and is one of the oldest rallycross venues in the world.
-        This short yet fast circuit combines tarmac and gravel, making it a favorite among grassroots drivers and enthusiasts.
-    </p>
-    <a href="{% url 'book_track' %}" class="btn btn-primary mt-4">Book this Track</a>
-    <div class="mt-4">
-        <button class="btn btn-secondary" onclick="window.history.back()">← Go Back</button>
-      </div>      
+<!-- Track Info Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4">About Lydden Hill</h2>
+        <p>
+            Lydden Hill is located near Canterbury in Kent and is one of the oldest rallycross venues in the world.
+            This short yet fast circuit combines tarmac and gravel, making it a favorite among grassroots drivers and enthusiasts.
+            With challenging corners and a unique surface, it’s perfect for drifting, track days, and rallycross events.
+        </p>
+        <p>
+            Lydden Hill Race Circuit is a historic motorsport venue located near Wootton in Kent, England, roughly halfway between Canterbury and Dover. Established in 1955 by Bill Chesson with support from the Astra Motor Club, the circuit initially featured grass and gravel surfaces, hosting stock car and motorcycle races. By 1965, it was fully surfaced with tarmac, enabling it to host higher-level events, including Formula 3.
+        </p>
+        <p>
+            Lydden Hill is internationally recognized as the birthplace of rallycross. The first rallycross event took place on February 4, 1967, and was the brainchild of TV producer Robert Reed, race organizer Bud Smith, and Chesson himself. The innovative format merged rally and circuit racing elements, with both tarmac and off-road sections. The debut race was won by Vic Elford driving a Porsche 911.
+            With a total length of approximately one mile (1.609 km), Lydden Hill holds the title of the shortest road racing track in the UK. Its layout offers a mix of tight corners, elevation changes, and exciting viewing points due to its natural amphitheatre setting.
+        </p>
+        <p>
+            Today, the circuit hosts a wide range of motorsport events year-round, including rallycross, drifting, saloon and sports car racing, and motorcycle races. It also offers track days for enthusiasts who want to experience the thrill of the track themselves.
+        </p>
+
+        <!-- Gallery Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Lydden Hill Moments</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <img src="{% static 'booking_system/images/lyddenhill-cars.jpg' %}" class="img-fluid rounded" alt="Race Cars at Lydden Hill">
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <img src="{% static 'booking_system/images/lyddenhill-fireworks.jpg' %}" class="img-fluid rounded" alt="Fireworks at Lydden Hill">
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <img src="{% static 'booking_system/images/lyddenhill-race.jpg' %}" class="img-fluid rounded" alt="Race Track Scene">
+            </div>
+        </div>
+    </div>
+</section>
+
+        <a href="{% url 'book_track' %}" class="btn btn-primary mt-4">Book this Track</a>
+        <div class="container mt-4">
+            <a href="{% url 'index' %}" class="btn btn-secondary">&larr; Back</a>
+        </div>
+    </div>
 </section>
 {% endblock %}
