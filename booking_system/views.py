@@ -37,7 +37,7 @@ def custom_login_view(request):
         if user is not None:
             login(request, user)
             messages.success(request, f"Welcome back, {user.username}!")
-            return redirect('my_bookings')
+            return redirect('index')
         else:
             messages.error(request, "Invalid username or password.")
     return render(request, 'booking_system/login.html')

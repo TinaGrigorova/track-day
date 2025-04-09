@@ -10861,3 +10861,31 @@ textarea.form-control-lg {
   border-radius: 5px;
   overflow: hidden;
 }
+
+.main-hero {
+  background-image: url('/static/booking_system/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.main-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
