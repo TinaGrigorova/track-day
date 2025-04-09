@@ -20,7 +20,7 @@ def signup(request):
             user = form.save()
             login(request, user)
             messages.success(request, f"Account created successfully! Welcome, {user.username}!")
-            return redirect('my_bookings')
+            return redirect('index') 
     else:
         form = UserRegisterForm()
     return render(request, 'booking_system/signup.html', {'form': form})
