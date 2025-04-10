@@ -10863,7 +10863,7 @@ textarea.form-control-lg {
 }
 
 .main-hero {
-  background-image: url('/static/booking_system/images/background.jpg');
+  background-image: url('../images/background.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 5px;
@@ -10872,6 +10872,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem; /* this helps spacing below */
 }
 
 .main-hero::before {
