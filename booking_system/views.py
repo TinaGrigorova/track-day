@@ -55,7 +55,9 @@ def book_track(request):
             return redirect('my_bookings')
     else:
         form = BookingForm()
+        
     return render(request, 'booking_system/book_track.html', {'form': form})
+
 
 # Viewing My Bookings
 @login_required
