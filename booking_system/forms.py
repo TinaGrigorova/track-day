@@ -1,5 +1,5 @@
 from django import forms
-from .models import Booking
+from .models import Booking, Track
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
@@ -14,6 +14,10 @@ class BookingForm(forms.ModelForm):
             'date': forms.DateInput(attrs={'type': 'date'}),
             'time_slot': forms.TextInput(attrs={'placeholder': 'e.g. 09:00 - 10:00'})
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['track'].queryset = Track.objects.all()
 
     def clean(self):
         cleaned_data = super().clean()
@@ -39,4 +43,3 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
-        
