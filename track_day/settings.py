@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import logging
+import sys
 
 # Load environment variables from env.py if it exists
 if os.path.isfile('env.py'):
@@ -27,7 +29,7 @@ SECRET_KEY = "django-insecure-6n#rc)ok*uhsocqn-^1q=4ja&43a(k8yt3o-srbnb1-n(f385k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['track-day-b7bd1e661185.herokuapp.com', '127.0.0.1', 'localhost']
 
 # Application definition
 INSTALLED_APPS = [
@@ -108,6 +110,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'booking_system/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
@@ -117,3 +120,16 @@ LOGIN_REDIRECT_URL = '/booking/my-bookings/'
 LOGIN_REDIRECT_URL = 'my_bookings' 
 LOGOUT_REDIRECT_URL = 'index'       
 
+LOGGING = {
+    'version': 1,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'stream': sys.stdout,
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+}
