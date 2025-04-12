@@ -2,18 +2,16 @@ from django import forms
 from .models import Booking, Track
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import Car  
 
 class BookingForm(forms.ModelForm):
-    """
-    Allows user to select track, car, date, and time slot.
-    """
     class Meta:
         model = Booking
         fields = ['track', 'car', 'date', 'time_slot']
-        widgets = {
-            'date': forms.DateInput(attrs={'type': 'date'}),
-            'time_slot': forms.TextInput(attrs={'placeholder': 'e.g. 09:00 - 10:00'})
-        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['car'].queryset = Car.objects.filter(is_rental=True)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
