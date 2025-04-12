@@ -1,56 +1,80 @@
 {% extends 'booking_system/base.html' %}
 
 {% block content %}
-<section class="py-5">
+<section class="py-5 bg-light d-flex flex-column min-vh-100">
     <div class="container">
-        <h1 class="text-center mb-4">Book a Track Day</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Book a Track Day</h2>
 
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-info text-center">{{ message }}</div>
-            {% endfor %}
-        {% endif %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <div class="alert alert-info text-center">{{ message }}</div>
+                            {% endfor %}
+                        {% endif %}
 
-        <form method="post" class="w-50 mx-auto">
-            {% csrf_token %}
+                        <form method="post">
+                            {% csrf_token %}
 
-            <div class="mb-3">
-                {{ form.track.label_tag }}
-                {{ form.track }}
-                {% if form.track.errors %}
-                    <div class="text-danger">{{ form.track.errors }}</div>
-                {% endif %}
+                            <!-- Ride Option Buttons -->
+                            <div class="mb-3 text-center">
+                                <input type="radio" class="btn-check" name="ride_option" id="option_passenger" value="passenger" required>
+                                <label class="btn btn-outline-primary me-2" for="option_passenger">Passenger Ride</label>
+
+                                <input type="radio" class="btn-check" name="ride_option" id="option_instructor" value="with_instructor">
+                                <label class="btn btn-outline-primary me-2" for="option_instructor">With Instructor</label>
+
+                                <input type="radio" class="btn-check" name="ride_option" id="option_no_instructor" value="without_instructor">
+                                <label class="btn btn-outline-primary" for="option_no_instructor">Without Instructor</label>
+                            </div>
+
+                            <!-- Car Selection -->
+                            <div class="mb-3">
+                                {{ form.car.label_tag }}
+                                {{ form.car }}
+                                {% if form.car.errors %}
+                                    <div class="text-danger">{{ form.car.errors }}</div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Track -->
+                            <div class="mb-3">
+                                {{ form.track.label_tag }}
+                                {{ form.track }}
+                                {% if form.track.errors %}
+                                    <div class="text-danger">{{ form.track.errors }}</div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Date -->
+                            <div class="mb-3">
+                                {{ form.date.label_tag }}
+                                {{ form.date }}
+                                {% if form.date.errors %}
+                                    <div class="text-danger">{{ form.date.errors }}</div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Time Slot -->
+                            <div class="mb-3">
+                                {{ form.time_slot.label_tag }}
+                                {{ form.time_slot }}
+                                {% if form.time_slot.errors %}
+                                    <div class="text-danger">{{ form.time_slot.errors }}</div>
+                                {% endif %}
+                            </div>
+
+                            <div class="d-flex justify-content-between mt-4">
+                                <button type="submit" class="btn btn-primary">Book Now</button>
+                                <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <div class="mb-3">
-                {{ form.car.label_tag }}
-                {{ form.car }}
-                {% if form.car.errors %}
-                    <div class="text-danger">{{ form.car.errors }}</div>
-                {% endif %}
-            </div>
-
-            <div class="mb-3">
-                {{ form.date.label_tag }}
-                {{ form.date }}
-                {% if form.date.errors %}
-                    <div class="text-danger">{{ form.date.errors }}</div>
-                {% endif %}
-            </div>
-
-            <div class="mb-3">
-                {{ form.time_slot.label_tag }}
-                {{ form.time_slot }}
-                {% if form.time_slot.errors %}
-                    <div class="text-danger">{{ form.time_slot.errors }}</div>
-                {% endif %}
-            </div>
-
-            <div class="d-flex justify-content-between mt-4">
-                <button type="submit" class="btn btn-primary">Book Now</button>
-                <a href="{% url 'index' %}" class="btn btn-secondary">Back</a>
-            </div>
-        </form>
+        </div>
     </div>
 </section>
 {% endblock %}
