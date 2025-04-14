@@ -15,7 +15,6 @@
         <div class="row g-4">
             {% for track in tracks %}
             <div class="col-12 col-md-4">
-                <a href="{% url 'track_detail' track_slug=track.slug %}" class="text-decoration-none text-dark">
                     <div class="card p-3 h-100">
                         <h5>
                             <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag"
@@ -27,7 +26,6 @@
                         <img src="{{ track.image.url }}" alt="{{ track.name }} Map" class="img-fluid mt-2 rounded">
                         {% endif %}
                     </div>
-                </a>
             </div>
             {% endfor %}
         </div>
