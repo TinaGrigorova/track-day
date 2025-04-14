@@ -43,7 +43,6 @@ def custom_login_view(request):
     return render(request, 'booking_system/login.html')
 
 # Booking a Track
-@login_required
 def book_track(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
@@ -79,6 +78,22 @@ def cancel_booking(request, booking_id):
         messages.success(request, 'Your booking has been cancelled.')
         return redirect('my_bookings')
     return render(request, 'booking_system/cancel_booking.html', {'booking': booking})
+
+# Edit Booking
+@login_required
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Booking updated successfully!")
+            return redirect('my_bookings')
+    else:
+        form = BookingForm(instance=booking)
+
+    return render(request, 'booking_system/edit_booking.html', {'form': form})
 
 # Track Information & booking 
 

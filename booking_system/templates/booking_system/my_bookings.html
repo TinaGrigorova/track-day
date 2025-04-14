@@ -22,9 +22,11 @@
                         <td>{{ booking.date }}</td>
                         <td>{{ booking.time_slot }}</td>
                         <td>{{ booking.car }}</td>
-                        <td>
+                        <td class="d-flex gap-2">
+                            <a href="{% url 'edit_booking' booking.id %}" class="btn btn-warning btn-sm">Edit</a>
                             <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-danger btn-sm">Cancel</a>
                         </td>
+                        
                     </tr>
                     {% endfor %}
                 </tbody>

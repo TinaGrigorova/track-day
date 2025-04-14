@@ -14,4 +14,5 @@ urlpatterns = [
     path('tracks/lydden-hill/', views.lydden_hill, name='lydden_hill'),
     path('tracks/brands-hatch/', views.brands_hatch, name='brands_hatch'),
     path('tracks/silverstone/', views.silverstone, name='silverstone'),
+    path('booking/edit/<int:booking_id>/', views.edit_booking, name='edit_booking'),
 ]
