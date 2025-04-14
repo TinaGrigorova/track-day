@@ -1,6 +1,17 @@
 {% extends 'booking_system/base.html' %}
+{% load static %}
 
 {% block content %}
+<!-- Hero Header -->
+<header class="py-5 bg-dark text-white text-center" style="background-image: url('{% static 'booking_system/images/background.jpg' %}'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h1 class="display-4 fw-bold">My Bookings</h1>
+        <p class="lead">Manage or update your booked track days</p>
+    </div>
+</header>
+
+<!-- Bookings Section -->
+
 <section class="py-5 text-center">
     <div class="container">
         <h1 class="mb-4">My Bookings</h1>
