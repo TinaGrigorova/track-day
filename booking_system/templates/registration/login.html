@@ -2,24 +2,47 @@
 {% load static %}
 
 {% block content %}
-<div class="container mt-5">
-    {% if not user.is_authenticated %}
-    <div class="alert alert-warning text-center mt-3">
-        <strong>Oh no!</strong> You need an account to book your experience. Please <a href="{% url 'signup' %}">sign up</a> or <a href="{% url 'login' %}">log in</a>.
+<!-- Hero section with working image background -->
+<header class="py-5 text-white text-center" style="background-image: url('{% static 'booking_system/images/background.jpg' %}'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Log In</h1>
+        <p class="lead">Access your account and manage your track days</p>
     </div>
-    {% endif %}
+</header>
 
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <h2 class="mb-4 text-center">Login</h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <div class="text-center">
-                    <button type="submit" class="btn btn-success">Log in</button>
+<!-- Login form card -->
+<section class="py-5 bg-light">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card shadow-lg" style="width: 100%; max-width: 500px;">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Log In</h2>
+
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-info text-center">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" name="username" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-3">
+                    <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}
