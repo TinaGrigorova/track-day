@@ -9,10 +9,16 @@ urlpatterns = [
     path('cancel/<int:booking_id>/', views.cancel_booking, name='cancel_booking'),
     path('signup/', views.signup, name='signup'),
     path('login/', views.custom_login_view, name='login'),
-    #path('logout/', views.custom_logout_view, name='logout'),
+
+    # Track detail and list
+    path('tracks/', views.all_tracks, name='all_tracks'), 
     path('track/<slug:track_slug>/', views.track_detail, name='track_detail'),
+
+    # Optional individual track pages (can remove if not needed anymore)
     path('tracks/lydden-hill/', views.lydden_hill, name='lydden_hill'),
     path('tracks/brands-hatch/', views.brands_hatch, name='brands_hatch'),
     path('tracks/silverstone/', views.silverstone, name='silverstone'),
+
+    # Booking editing
     path('booking/edit/<int:booking_id>/', views.edit_booking, name='edit_booking'),
 ]

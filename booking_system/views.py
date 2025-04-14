@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from .forms import BookingForm, UserRegisterForm
 from .models import Booking
+from booking_system.models import Track
 
 # Homepage
 def index(request):
@@ -94,6 +95,10 @@ def edit_booking(request, booking_id):
         form = BookingForm(instance=booking)
 
     return render(request, 'booking_system/edit_booking.html', {'form': form})
+
+def all_tracks(request):
+    tracks = Track.objects.all()
+    return render(request, 'booking_system/all_tracks.html', {'tracks': tracks})
 
 # Track Information & booking 
 

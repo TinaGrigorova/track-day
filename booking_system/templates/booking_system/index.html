@@ -19,6 +19,7 @@
                 <a href="{% url 'track_detail' 'lydden-hill' %}" class="text-decoration-none text-dark">
                     <div class="card p-3 track-card h-100">
                         <h5>
+                            <img src="{% static 'booking_system/images/star.png' %}" alt="star" style="width: 24px; height: auto; margin-right: 8px;">
                             <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
                             Lydden Hill
                         </h5>
@@ -37,6 +38,7 @@
                 <a href="{% url 'track_detail' 'brands-hatch' %}" class="text-decoration-none text-dark">
                     <div class="card p-3 track-card h-100">
                         <h5>
+                            <img src="{% static 'booking_system/images/star.png' %}" alt="star" style="width: 24px; height: auto; margin-right: 8px;">
                             <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
                             Brands Hatch
                         </h5>
@@ -55,6 +57,7 @@
                 <a href="{% url 'track_detail' 'silverstone' %}" class="text-decoration-none text-dark">
                     <div class="card p-3 track-card h-100">
                         <h5>
+                            <img src="{% static 'booking_system/images/star.png' %}" alt="star" style="width: 24px; height: auto; margin-right: 8px;">
                             <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag" style="width: 24px; height: auto; margin-right: 8px;">
                             Silverstone Circuit
                         </h5>
@@ -70,6 +73,10 @@
         </div>
     </div>
 </section>
+
+<div class="text-center mt-4">
+    <a href="{% url 'all_tracks' %}" class="btn btn-primary">See All Tracks</a>
+</div>
 
 <!-- Info Section -->
 <section class="py-5 bg-dark text-white text-center">

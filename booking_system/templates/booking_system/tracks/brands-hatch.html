@@ -2,20 +2,65 @@
 {% load static %}
 
 {% block content %}
-<header class="py-5 text-white text-center" cover; background-position: center;>
-    <div class="container">
-        <h1 class="display-4">Brands Hatch</h1>
-    </div>
-</header>
 
-<section class="py-5 container">
-    <p>
-        Lydden Hill is located near Canterbury in Kent and is one of the oldest rallycross venues in the world.
-        This short yet fast circuit combines tarmac and gravel, making it a favorite among grassroots drivers and enthusiasts.
-    </p>
-    <a href="{% url 'book_track' %}" class="btn btn-primary mt-4">Book this Track</a>
-    <div class="mt-4">
-        <button class="btn btn-secondary" onclick="window.history.back()">← Go Back</button>
-      </div>      
+<!-- Hero Section -->
+<div class="track-hero text-white text-center">
+    <header class="py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Lydden Hill Circuit</h1>
+            <p class="lead">Feel the thrill where Rallycross was born</p>
+        </div>
+    </header>
+</div>
+
+<!-- Track Info Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="mb-4">About Lydden Hill</h2>
+        <p>
+            Lydden Hill is located near Canterbury in Kent and is one of the oldest rallycross venues in the world.
+            This short yet fast circuit combines tarmac and gravel, making it a favorite among grassroots drivers and enthusiasts.
+            With challenging corners and a unique surface, it’s perfect for drifting, track days, and rallycross events.
+        </p>
+        <p>
+            Lydden Hill Race Circuit is a historic motorsport venue located near Wootton in Kent, England, roughly halfway between Canterbury and Dover.
+            Established in 1955 by Bill Chesson, the circuit initially featured grass and gravel surfaces before becoming fully tarmac by 1965.
+        </p>
+        <p>
+            Internationally recognized as the birthplace of rallycross, the first event took place on February 4, 1967.
+            The circuit’s layout combines tight corners, elevation changes, and a unique amphitheatre setting, making it exciting for spectators.
+        </p>
+        <p>
+            Today, Lydden Hill hosts rallycross, drifting, motorcycle races, and public track days year-round.
+        </p>
+
+        <!-- Gallery -->
+        <section class="py-5 text-center">
+            <h2 class="mb-4">Lydden Hill Moments</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <img src="{% static 'booking_system/images/lyddenhill-cars.jpg' %}" alt="Lydden Hill Cars" class="gallery-img card-img-top">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <img src="{% static 'booking_system/images/lyddenhill-show.jpg' %}" alt="Lydden Hill Fireworks" class="gallery-img card-img-top">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <img src="{% static 'booking_system/images/lyddenhill-race.jpg' %}" alt="Lydden Hill Race" class="gallery-img card-img-top">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <div class="mt-4">
+            <a href="{% url 'book_track' %}" class="btn btn-primary">Book this Track</a>
+            <a href="{% url 'index' %}" class="btn btn-secondary ms-2">&larr; Back</a>
+        </div>
+    </div>
 </section>
 {% endblock %}
