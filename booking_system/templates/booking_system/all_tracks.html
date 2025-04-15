@@ -14,18 +14,26 @@
         <div class="row g-4">
             {% for track in tracks %}
             <div class="col-12 col-md-4">
-                    <div class="card p-3 h-100">
-                        <h5>
-                            <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag"
-                                style="width: 24px; height: auto; margin-right: 8px;">
-                            {{ track.name }}
-                        </h5>
-                        <p>{{ track.description|truncatewords:30 }}</p>
-                        {% if track.image %}
-                        <img src="{{ track.image.url }}" alt="{{ track.name }} Map" class="img-fluid mt-2 rounded">
-                        {% endif %}
+                <div class="card p-3 h-100 track-card-hover">
+                    <h5>
+                        <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag"
+                            style="width: 24px; height: auto; margin-right: 8px;">
+                        {{ track.name }}
+                    </h5>
+            
+                    {% if track.image %}
+                    <img src="{{ track.image.url }}" alt="{{ track.name }} Map" class="img-fluid mt-2 rounded">
+                    {% endif %}
+            
+                    <!-- Full Description on Hover Only -->
+                    <div class="track-description-overlay">
+                        <p>{{ track.description }}</p>
                     </div>
-            </div>
+            
+                    <!-- Book Track Button -->
+                    <a href="{% url 'book_track' %}" class="btn btn-primary book-track-btn">Book Track</a>
+                </div>
+            </div>            
             {% endfor %}
         </div>
     </div>
