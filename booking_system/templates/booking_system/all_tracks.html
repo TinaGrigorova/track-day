@@ -11,32 +11,33 @@
 
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for track in tracks %}
-            <div class="col-12 col-md-4">
-                <div class="card p-3 h-100 track-card-hover">
+            <div class="col d-flex">
+                <div class="card p-3 h-100 d-flex flex-column track-card-hover w-100">
                     <h5>
                         <img src="{% static 'booking_system/images/raceflag.png' %}" alt="Race Flag"
-                            style="width: 24px; height: auto; margin-right: 8px;">
+                             style="width: 24px; height: auto; margin-right: 8px;">
                         {{ track.name }}
                     </h5>
-            
+        
                     {% if track.image %}
                     <img src="{{ track.image.url }}" alt="{{ track.name }} Map" class="img-fluid mt-2 rounded">
                     {% endif %}
-            
-                    <!-- Full Description on Hover Only -->
+        
+                    <!-- Full Description on Hover -->
                     <div class="track-description-overlay">
                         <p>{{ track.description }}</p>
                     </div>
-            
-                    <!-- Book Track Button -->
-                    <a href="{% url 'book_track_with_track' track.slug %}" class="btn btn-primary book-track-btn">Book Track</a>
+        
+                    <!-- Button always sticks to the bottom -->
+                    <div class="mt-auto pt-3">
+                        <a href="{% url 'book_track_with_track' track.slug %}" class="btn btn-primary w-100">Book Track</a>
+                    </div>
                 </div>
-            </div>            
+            </div>
             {% endfor %}
-        </div>
-    </div>
+        </div>        
 </section>
 <div class="text-center my-5">
     <a href="{% url 'booking_index' %}" class="btn btn-secondary px-4 py-2">
