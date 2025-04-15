@@ -31,4 +31,12 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(next_page='index'), name='logout'),
     path('signup/', booking_views.signup, name='signup'), 
     path('accounts/', include('django.contrib.auth.urls')),
+
+
 ]
+
+ #Errors
+handler404 = 'booking_system.views.custom_404'
+handler500 = 'booking_system.views.custom_500'
+handler400 = 'booking_system.views.custom_400'
+handler403 = 'booking_system.views.custom_403'
