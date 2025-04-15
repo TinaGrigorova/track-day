@@ -32,13 +32,19 @@ class Car(models.Model):
     def __str__(self):
         return f"{self.brand} {self.model} ({self.year})"
     
+RIDE_OPTIONS = [
+    ('passenger', 'Passenger Ride'),
+    ('with_instructor', 'With Instructor'),
+    ('without_instructor', 'Without Instructor'),
+]
+
 class Booking(models.Model):
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='bookings')
-    track = models.ForeignKey(Track, on_delete=models.CASCADE)
-    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
+    track = models.ForeignKey('Track', on_delete=models.CASCADE)
+    car = models.ForeignKey('Car', on_delete=models.CASCADE)
     date = models.DateField()
     time_slot = models.CharField(max_length=20)
+    ride_option = models.CharField(max_length=20, choices=RIDE_OPTIONS, default='passenger')
 
     def __str__(self):
         return f"{self.user.username} - {self.track.name} on {self.date}"
-    

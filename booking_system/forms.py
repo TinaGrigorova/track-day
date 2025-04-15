@@ -7,26 +7,66 @@ from .models import Car
 from django import forms
 from .models import Booking, Track, Car
 from django.utils import timezone
+from .models import RIDE_OPTIONS
+
+TIME_CHOICES = [
+    ('10:00 AM', '10:00 AM'),
+    ('11:00 AM', '11:00 AM'),
+    ('12:00 PM', '12:00 PM'),
+    ('1:00 PM', '1:00 PM'),
+    ('2:00 PM', '2:00 PM'),
+    ('3:00 PM', '3:00 PM'),
+    ('4:00 PM', '4:00 PM'),
+    ('5:00 PM', '5:00 PM'),
+    ('6:00 PM', '6:00 PM'),
+]
+
+from django import forms
+from .models import Booking, Track, Car, RIDE_OPTIONS
+from django.utils import timezone
 
 class BookingForm(forms.ModelForm):
     date = forms.DateField(
         widget=forms.DateInput(attrs={
             'type': 'date',
-            'min': timezone.now().date().isoformat()
+            'min': timezone.now().date().isoformat(),
+            'class': 'form-control'
         }),
         label='Select a date'
     )
-    time_slot = forms.CharField(
-        widget=forms.TextInput(attrs={
-            'placeholder': 'e.g. 09:00 - 10:00',
-            'class': 'form-control'
-        }),
-        label='Time slot'
+
+    ride_option = forms.ChoiceField(
+        choices=RIDE_OPTIONS,
+        widget=forms.Select(attrs={'class': 'form-select'}),
+        label='Ride Option'
     )
 
     class Meta:
         model = Booking
-        fields = ['track', 'car', 'date', 'time_slot']
+        fields = ['track', 'car', 'date', 'time_slot', 'ride_option']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['track'].queryset = Track.objects.all()
+        self.fields['car'].queryset = Car.objects.filter(is_rental=True)
+        self.fields['track'].widget.attrs.update({'class': 'form-select'})
+        self.fields['car'].widget.attrs.update({'class': 'form-select'})
+        self.fields['time_slot'].widget.attrs.update({'class': 'form-control'})
+
+    def clean(self):
+        cleaned_data = super().clean()
+        track = cleaned_data.get('track')
+        date = cleaned_data.get('date')
+        time_slot = cleaned_data.get('time_slot')
+
+        if track and date and time_slot:
+            existing = Booking.objects.filter(track=track, date=date, time_slot=time_slot)
+            if existing.exists():
+                raise forms.ValidationError(
+                    f"{track.name} is already booked for {date} at {time_slot}."
+                )
+        return cleaned_data
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
