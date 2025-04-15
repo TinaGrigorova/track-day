@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='booking_index'),
+    path('book/', views.book_track, name='book_track'),
     path('book/<slug:track_slug>/', views.book_track, name='book_track_with_track'),
     path('success/', views.booking_success, name='booking_success'),
     path('my-bookings/', views.my_bookings, name='my_bookings'),
