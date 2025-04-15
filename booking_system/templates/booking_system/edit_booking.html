@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<!-- Hero Header -->
 <header class="py-5 text-white text-center" style="background-image: url('{% static 'booking_system/images/background.jpg' %}'); background-size: cover; background-position: center;">
     <div class="container">
         <h1 class="display-4 fw-bold">Edit Booking</h1>
@@ -9,6 +10,7 @@
     </div>
 </header>
 
+<!-- Booking Edit Form -->
 <section class="py-5 bg-light">
     <div class="container d-flex justify-content-center align-items-center">
         <div class="card shadow-lg" style="width: 100%; max-width: 600px;">
@@ -17,20 +19,68 @@
 
                 <form method="post">
                     {% csrf_token %}
-                    {% for field in form %}
-                        <div class="mb-3">
-                            {{ field.label_tag }}
-                            {{ field }}
-                            {% if field.errors %}
-                                <div class="text-danger small">{{ field.errors }}</div>
-                            {% endif %}
-                        </div>
-                    {% endfor %}
+
+                    <!-- Ride Option Buttons -->
+                    <div class="mb-3 text-center">
+                        <label class="form-label d-block">Ride Option</label>
+
+                        <input type="radio" class="btn-check" name="ride_option" id="option_passenger" value="passenger" {% if form.ride_option.value == "passenger" %}checked{% endif %}>
+                        <label class="btn btn-outline-primary me-2" for="option_passenger">Passenger Ride</label>
+
+                        <input type="radio" class="btn-check" name="ride_option" id="option_instructor" value="with_instructor" {% if form.ride_option.value == "with_instructor" %}checked{% endif %}>
+                        <label class="btn btn-outline-primary me-2" for="option_instructor">With Instructor</label>
+
+                        <input type="radio" class="btn-check" name="ride_option" id="option_no_instructor" value="without_instructor" {% if form.ride_option.value == "without_instructor" %}checked{% endif %}>
+                        <label class="btn btn-outline-primary" for="option_no_instructor">Without Instructor</label>
+
+                        {% if form.ride_option.errors %}
+                            <div class="text-danger small mt-2">{{ form.ride_option.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Track Selection -->
+                    <div class="mb-3">
+                        {{ form.track.label_tag }}
+                        {{ form.track }}
+                        {% if form.track.errors %}
+                            <div class="text-danger small">{{ form.track.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Car Selection -->
+                    <div class="mb-3">
+                        {{ form.car.label_tag }}
+                        {{ form.car }}
+                        {% if form.car.errors %}
+                            <div class="text-danger small">{{ form.car.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Date -->
+                    <div class="mb-3">
+                        {{ form.date.label_tag }}
+                        {{ form.date }}
+                        {% if form.date.errors %}
+                            <div class="text-danger small">{{ form.date.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Time Slot -->
+                    <div class="mb-3">
+                        {{ form.time_slot.label_tag }}
+                        {{ form.time_slot }}
+                        {% if form.time_slot.errors %}
+                            <div class="text-danger small">{{ form.time_slot.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Submit Buttons -->
                     <div class="d-grid gap-2 mt-4">
                         <button type="submit" class="btn btn-primary">Save Changes</button>
                         <a href="{% url 'my_bookings' %}" class="btn btn-outline-secondary">Cancel</a>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
