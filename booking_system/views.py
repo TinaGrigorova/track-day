@@ -44,11 +44,8 @@ def custom_login_view(request):
     return render(request, 'booking_system/login.html')
 
 # Booking a Track
-def book_track(request, track_slug=None):
-    track = None
-    if track_slug:
-        track = get_object_or_404(Track, slug=track_slug)
-
+@login_required
+def book_track(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -58,7 +55,7 @@ def book_track(request, track_slug=None):
             messages.success(request, 'Your track day has been booked successfully!')
             return redirect('my_bookings')
     else:
-        form = BookingForm(initial={'track': track} if track else None)
+        form = BookingForm()
 
     return render(request, 'booking_system/book_track.html', {'form': form})
 

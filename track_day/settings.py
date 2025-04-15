@@ -115,7 +115,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = '/booking/my-bookings/'
 LOGIN_REDIRECT_URL = 'my_bookings' 
-LOGOUT_REDIRECT_URL = 'index'       
+LOGOUT_REDIRECT_URL = 'index'  
+LOGIN_URL = 'login'     
 
 LOGGING = {
     'version': 1,
