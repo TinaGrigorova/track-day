@@ -58,14 +58,20 @@ class BookingForm(forms.ModelForm):
         time_slot = cleaned_data.get('time_slot')
 
         if track and date and time_slot:
-            existing = Booking.objects.filter(track=track, date=date, time_slot=time_slot)
+            current_booking = self.instance if self.instance.pk else None
+            existing = Booking.objects.filter(
+                track=track,
+                date=date,
+                time_slot=time_slot
+            ).exclude(id=current_booking.id if current_booking else None)
+
             if existing.exists():
                 raise forms.ValidationError(
                     f"{track.name} is already booked for {date} at {time_slot}."
                 )
+
         return cleaned_data
-
-
+    
 class UserRegisterForm(UserCreationForm):
     """
     User registration form with email field.
