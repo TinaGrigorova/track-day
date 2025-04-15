@@ -31,11 +31,17 @@
                     </div>
             
                     <!-- Book Track Button -->
-                    <a href="{% url 'book_track' %}" class="btn btn-primary book-track-btn">Book Track</a>
+                    <a href="{% url 'book_track_with_track' track.slug %}" class="btn btn-primary book-track-btn">Book Track</a>
                 </div>
             </div>            
             {% endfor %}
         </div>
     </div>
 </section>
+<div class="text-center my-5">
+    <a href="{% url 'booking_index' %}" class="btn btn-secondary px-4 py-2">
+        &larr; Back
+    </a>
+</div>
+
 {% endblock %}
