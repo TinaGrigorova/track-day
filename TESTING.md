@@ -277,6 +277,38 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 
 ## Features Testing
  
+| Page                | User Action                                      | Expected Result                                              | Status |
+|---------------------|--------------------------------------------------|---------------------------------------------------------------|--------|
+| **Home Page**       | Click on Logo                                    | Redirect to Home Page                                        | ✅ PASS |
+|                     | Click on Sign Up button                          | Redirect to Sign Up page                                     | ✅ PASS |
+|                     | Click on Login                                   | Redirect to Login page                                       | ✅ PASS |
+|                     | Click on a Track Card                            | Redirect to Track Detail page                                | ✅ PASS |
+|                     | Click on "See All Tracks"                       | Redirect to All Tracks listing page                          | ✅ PASS |
+|                     | Hover on Track Card                              | Card zooms and reveals full description                      | ✅ PASS |
+|                     | Click on Book Track                              | Redirect to Book Track page                                  | ✅ PASS |
+| **Sign Up Page**    | Fill invalid form                                | Displays validation errors                                   | ✅ PASS |
+|                     | Submit valid form                                | Account created and redirected to homepage                   | ✅ PASS |
+|                     | Click login link                                 | Redirect to login page                                       | ✅ PASS |
+| **Login Page**      | Submit invalid credentials                       | Displays error message                                       | ✅ PASS |
+|                     | Submit valid credentials                         | Redirect to homepage, user greeted                           | ✅ PASS |
+|                     | Click sign up link                               | Redirect to signup page                                      | ✅ PASS |
+| **Booking Page**    | Not logged in                                    | Redirected to login page                                     | ✅ PASS |
+|                     | Submit empty form                                | Display validation errors                                    | ✅ PASS |
+|                     | Select valid data                                | Booking successful, redirected to My Bookings                | ✅ PASS |
+|                     | Try booking same track, date, time               | Validation error, can't double book                          | ✅ PASS |
+| **My Bookings**     | View booking details                             | Details displayed in table                                   | ✅ PASS |
+|                     | Click Edit                                       | Redirect to Edit Booking page                                | ✅ PASS |
+|                     | Click Cancel                                     | Booking is deleted                                           | ✅ PASS |
+| **Edit Booking**    | Change valid details and submit                  | Booking updates successfully                                 | ✅ PASS |
+|                     | Only change ride/car option and submit           | Booking updates successfully                                 | ✅ PASS |
+|                     | Submit conflicting time/date                     | Validation error                                              | ✅ PASS |
+| **All Tracks**      | Hover card                                       | Show full description overlay                                | ✅ PASS |
+|                     | Click Book Track                                 | Redirects to Book page with selhttps://github.com/TinaGrigorova/track-day/blob/main/TESTING.mdected track                   | ✅ PASS |
+| **Track Detail Pages** | View track info                              | Track information and gallery loads                          | ✅ PASS |
+|                     | Click Book this Track                            | Redirect to booking form                                     | ✅ PASS |
+|                     | Click Back                                       | Returns to homepage                                          | ✅ PASS |
+| **Error Pages**     | Type invalid URL                                 | Custom 404 page appears                                      | ✅ PASS |
+|                     | Trigger error manually (dev)                     | Custom 500 page appears                                      | ✅ PASS |
 
 ## Manual Testing
 
