@@ -108,8 +108,8 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 
 
 ### Color Scheme
-![Color Scheme]()
-
+![Color Scheme](/workspaces/track-day/booking_system/static/booking_system/images/readme_images/colour_pallet1.png)
+![Color Scheme](/workspaces/track-day/booking_system/static/booking_system/images/readme_images/colour_pallet2.png)
 
 ### Wireframe
 
