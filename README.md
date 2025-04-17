@@ -108,8 +108,8 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 
 
 ### Color Scheme
-![Color Scheme](/workspaces/track-day/booking_system/static/booking_system/images/readme_images/colour_pallet1.png)
-![Color Scheme](/workspaces/track-day/booking_system/static/booking_system/images/readme_images/colour_pallet2.png)
+![Color Scheme](booking_system/static/booking_system/images/readme_images/colour_pallet1.png)
+![Color Scheme](booking_system/static/booking_system/images/readme_images/colour_pallet2.png)
 
 ### Wireframe
 
@@ -243,19 +243,48 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 ### Existing Features
 
 * Home Page
+  
+  ![Home Page](booking_system/static/booking_system/images/readme_images/main_page_upper.png)
+  ![Home Page](booking_system/static/booking_system/images/readme_images/main_page_lower.png)
+  
 * Navigation Bar
+   ![Home Page](booking_system/static/booking_system/images/readme_images/nav_bar.png)
 * Futured Tracks Cards
+   ![Home Page](booking_system/static/booking_system/images/readme_images/feautured_tracks.png)
   * Lydden Hill Track
+   ![Home Page](booking_system/static/booking_system/images/readme_images/lydden_hill_page.png)
   * Brans Hatch Track
+   ![Home Page](booking_system/static/booking_system/images/readme_images/brands_hatch_page.png)
   * Silverstone Track
+   ![Home Page](booking_system/static/booking_system/images/readme_images/silverstone_page.png)
 * Booking Page
+  ![Home Page](booking_system/static/booking_system/images/readme_images/booking_page.png)
+  * Booking Options:
+  * Car Option
+    ![Home Page](booking_system/static/booking_system/images/readme_images/cars_options.png)
+  * Ride Option
+    ![Home Page](booking_system/static/booking_system/images/readme_images/ride_options.png)
+  * Time Slot
+    ![Home Page](booking_system/static/booking_system/images/readme_images/time_slot.png)
+  * Track Option
+    ![Home Page](booking_system/static/booking_system/images/readme_images/tracks_options.png)
 * Edit Booking
+  ![Home Page](booking_system/static/booking_system/images/readme_images/edit_booking.png)
 * Cancel Booking
+  ![Home Page](booking_system/static/booking_system/images/readme_images/cancel_booking.png)
+* My Bookings
+  ![Home Page](booking_system/static/booking_system/images/readme_images/my_bookings.png)
 * Login Page
+  ![Home Page](booking_system/static/booking_system/images/readme_images/login_page.png)
 * Sign Up Page
+  ![Home Page](booking_system/static/booking_system/images/readme_images/signup_page.png)
 * Confirmation Messages
+  ![Home Page](booking_system/static/booking_system/images/readme_images/update_msg.png)
+  ![Home Page](booking_system/static/booking_system/images/readme_images/cancel_msg.png)
 * Information Part
+  ![Home Page](booking_system/static/booking_system/images/readme_images/desctiprion.png)
 * Footer
+  ![Home Page](booking_system/static/booking_system/images/readme_images/footer.png)
 
   
 ---
