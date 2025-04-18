@@ -260,7 +260,7 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 * All Tracks
   ![All tracks](booking_system/static/booking_system/images/readme_images/all_tracks_page.png)
 * Booking Page
-  ![Home Page](booking_system/static/booking_system/images/readme_images/booking_form.png)
+  ![Home Page](booking_system/images/readme_images/booking_form.png)
   * Booking Options:
   * Car Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/cars_options.png)
