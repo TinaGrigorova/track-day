@@ -142,6 +142,7 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 ![Delete Booking Page](booking_system/static/booking_system/images/readme_images/wf_login_page.png)
 </details>
 
+---
 
 ### Data Models
 
@@ -389,4 +390,15 @@ Testing was performed manually and via Django’s built-in testing tools.
 
 * I would like to thank my mentor for support and feedback throughout this project, Mitko Bachvarov.
 * I would also like to extend my appreciation to the Slack community for their continuous engagement and willingness to share knowledge. The collaborative environment provided a platform for learning, troubleshooting, and gaining inspiration from fellow developers.
+
+
+
+## Future Enhancements
+
+- Stripe integration for paid bookings
+- Track day gift cards
+- Admin calendar for track slot availability
+- Booking confirmation email
+
+
 
