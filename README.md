@@ -117,12 +117,6 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 <summary> Home Page
 </summary>
 
-![Home Page]()
-</details>
-
-<details>
-<summary> Home Page when logged in
-</summary>
 
 ![Home Page when logged in]()
 </details>
@@ -130,20 +124,22 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 <details>
 <summary> Make a Booking Page
 </summary>
+  
+![My Booking Page](IMG)
 </details>
 
 <details>
 <summary> My Booking Page
 </summary>
 
-![My Booking Page](IMG)
+![Booking Options](IMG)
 </details>
 
 <details>
-<summary> Edit Booking Page
+<summary> Booking Options
 </summary>
 
-![Edit Booking Page](IMG)
+![Edit Booking Options](IMG)
 </details>
 
 <details>
@@ -151,13 +147,6 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 </summary>
 
 ![Delete Booking Page]()
-</details>
-
-<details>
-<summary> User Login Page
-</summary>
-
-![User Login Page]()
 </details>
 
 ---
@@ -260,7 +249,7 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 * All Tracks
   ![All tracks](booking_system/static/booking_system/images/readme_images/all_tracks_page.png)
 * Booking Page
-  ![Home Page](booking_system/images/readme_images/booking_form.png)
+  ![Home Page](booking_system/static/booking_system/images/readme_images/booking_form.png)
   * Booking Options:
   * Car Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/cars_options.png)
@@ -285,6 +274,7 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 * Confirmation Messages
   ![Home Page](booking_system/static/booking_system/images/readme_images/update_msg.png)
   ![Home Page](booking_system/static/booking_system/images/readme_images/cancel_msg.png)
+  ![Home Page](booking_system/static/booking_system/images/readme_images/successful_msg.png)
 * Information Part
   ![Home Page](booking_system/static/booking_system/images/readme_images/desctiprion.png)
 * Footer
