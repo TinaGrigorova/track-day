@@ -118,53 +118,30 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 </summary>
 
 
-![Home Page when logged in]()
+![Home Page](booking_system/static/booking_system/images/readme_images/wf_home_page.png)
 </details>
 
 <details>
 <summary> Make a Booking Page
 </summary>
   
-![My Booking Page](IMG)
-</details>
-
-<details>
-<summary> My Booking Page
-</summary>
-
-![Booking Options](IMG)
+![My Booking Page](booking_system/static/booking_system/images/readme_images/wf_booking_from.png)
 </details>
 
 <details>
 <summary> Booking Options
 </summary>
 
-![Edit Booking Options](IMG)
+![Edit Booking Options](booking_system/static/booking_system/images/readme_images/wf_booking_opt.png)
 </details>
 
 <details>
-<summary> Delete Booking Page
+<summary> Login Page
 </summary>
 
-![Delete Booking Page]()
+![Delete Booking Page](booking_system/static/booking_system/images/readme_images/wf_login_page.png)
 </details>
 
----
-## 📸 Screenshots
-
-- **Homepage** – With featured tracks  
-  `booking_system/images/screenshot-homepage.png`
-
-- **All Tracks** – Grid layout with track info and "Book Track" buttons  
-  `booking_system/images/screenshot-tracks.png`
-
-- **Booking Form** – Includes date, time, car, and ride options  
-  `booking_system/images/screenshot-booking-form.png`
-
-- **My Bookings** – User view of their current reservations  
-  `booking_system/images/screenshot-my-bookings.png`
-
----
 
 ### Data Models
 
@@ -412,15 +389,4 @@ Testing was performed manually and via Django’s built-in testing tools.
 
 * I would like to thank my mentor for support and feedback throughout this project, Mitko Bachvarov.
 * I would also like to extend my appreciation to the Slack community for their continuous engagement and willingness to share knowledge. The collaborative environment provided a platform for learning, troubleshooting, and gaining inspiration from fellow developers.
-
-
-
-## Future Enhancements
-
-- Stripe integration for paid bookings
-- Track day gift cards
-- Admin calendar for track slot availability
-- Booking confirmation email
-
-
 
