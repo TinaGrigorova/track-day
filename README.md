@@ -176,10 +176,10 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 ## Security Features
 
 ### User Authentication
-* Implemented using Django Allauth, providing comprehensive features for user registration, login, logout, password reset, and email verification. ​
+* Implemented using Django Allauth, providing comprehensive features for user registration, login, logout and password reset.
 
 ### Login Decorator
-* Views such as booking_create, booking_success, booking_overview, edit_booking, and delete_booking are protected using Django's @login_required decorator.
+* Views such as booking_create, booking_success, cancel_booking, edit_booking, and cancel_booking are protected using Django's @login_required decorator.
 * This ensures that only authenticated users can access booking-related functionalities.​
 
 ### CSRF Protection
@@ -391,14 +391,6 @@ Testing was performed manually and via Django’s built-in testing tools.
 * I would like to thank my mentor for support and feedback throughout this project, Mitko Bachvarov.
 * I would also like to extend my appreciation to the Slack community for their continuous engagement and willingness to share knowledge. The collaborative environment provided a platform for learning, troubleshooting, and gaining inspiration from fellow developers.
 
-
-
-## Future Enhancements
-
-- Stripe integration for paid bookings
-- Track day gift cards
-- Admin calendar for track slot availability
-- Booking confirmation email
 
 
 
