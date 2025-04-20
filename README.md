@@ -210,53 +210,157 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 ### Existing Features
 
 * Home Page
-  
+  * Serves as the landing page where users are introduced to the Track Day service.
+  * Contents:
+Hero header with background image and headline.
+Featured Tracks section with a few highlighted racing circuits.
+Introduction or promotional text.
+CTA (Call to Action) buttons directing users to booking or track details.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/main_page_upper.png)
   ![Home Page](booking_system/static/booking_system/images/readme_images/main_page_lower.png)
   
 * Navigation Bar
+  * Present on every page to allow seamless navigation.
+  * Contents:
+Links to: Home, About, All Tracks, Login/Logout, Sign Up.
+If logged in: Dropdown with "My Bookings", "Book Track", and "Logout"
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/nav_bar.png)
+
 * Futured Tracks Cards
+  * Display 3 popular tracks on the homepage with summary and image.
+  * Contents:
+Each card includes the track name, short description, and a “Book Track” button.
+Leads to dedicated detail pages or booking.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/feautured_tracks.png)
+  
   * Lydden Hill Track
+     - Show details for Lydden Hill circuit.
+     - Contents:
+Background story, track stats, map image, and “Book Now” CTA.
+Description of its history and unique features.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/lydden_hill_page.png)
+
   * Brans Hatch Track
+    - Show details for Brands Hatch circuit.
+    - Contents:
+Overview, technical highlights, image, and booking button.
+Emphasis on its popularity in British motorsport.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/brands_hatch_page.png)
+
   * Silverstone Track
+    - Show details for Silverstone circuit.
+    - Contents:
+Historic insights, layout, speed characteristics, and booking link.
+Known as the home of British racing.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/silverstone_page.png)
+
 * All Tracks
+  * Display a full list of all available tracks with booking options.
+  * Contents:
+Cards for every available track (including featured ones and others like Cadwell, Thruxton, Castle Combe, etc.).
+Description, image, and “Book Track” button for each.
+Great overview for users to compare and decide.
+
   ![All tracks](booking_system/static/booking_system/images/readme_images/all_tracks_page.png)
+  
 * Booking Page
+  * Allow users to book a track session.
+  * Contents:
+Form for selecting track, car, date, time slot, and ride option.
+Responsive validation and error messages.
+Only visible to logged-in users.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/booking_form.png)
+  
   * Booking Options:
+    
   * Car Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/cars_options.png)
+    
   * Ride Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/ride_options.png)
+    
   * Time Slot
     ![Home Page](booking_system/static/booking_system/images/readme_images/time_slot.png)
+    
   * Track Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/tracks_options.png)
+    
   * Calendar 
    ![Home Page](booking_system/static/booking_system/images/readme_images/booking_calendar.png)
+
 * Edit Booking
+  *  Let users change the details of an existing booking.
+  * Contents:
+Pre-filled form for editing track, car, date, time, and ride.
+Prevents booking conflicts and invalid input.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/edit_booking.png)
+  
 * Cancel Booking
+  * Confirm and process cancellation of a booking.
+  * Contents:
+Displays booking info with a “Confirm Delete” and “Cancel” button.
+Confirmation message upon deletion.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/cancel_booking.png)
+  
 * My Bookings
+  *  Let users view all their past and upcoming bookings.
+  * Contents:
+Table with booking details (track, date, time, car, ride type).
+Edit and Cancel buttons.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/my_bookings.png)
+  
 * Login Page
+  * Allow returning users to log into their account.
+  * Contents:
+Email and password fields.
+Redirects to dashboard or intended page.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/login_page.png)
+  
 * Sign Up Page
+  * Register new users.
+  * Contents:
+Username, email, and password fields.
+Redirects and logs in user upon successful registration.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/signup_page.png)
+  
 * Confirmation Messages
+  * Notify user of success during form submission/cancellation.
+  
   ![Home Page](booking_system/static/booking_system/images/readme_images/update_msg.png)
   ![Home Page](booking_system/static/booking_system/images/readme_images/cancel_msg.png)
   ![Home Page](booking_system/static/booking_system/images/readme_images/successful_msg.png)
+  
 * Information Part
+  * Provides users with extra content 
   ![Home Page](booking_system/static/booking_system/images/readme_images/desctiprion.png)
+  
 * Footer
+  * Located at the bottom of every page.
+  * Contents:
+Copyright
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/footer.png)
+
+  
+## Future Enhancements
+
+- Stripe integration for paid bookings
+- Track day gift cards
+- Admin calendar for track slot availability
+- Booking confirmation email
+- User reviews on each track experience
 
   
 ---
