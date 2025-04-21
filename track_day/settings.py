@@ -24,12 +24,19 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-6n#rc)ok*uhsocqn-^1q=4ja&43a(k8yt3o-srbnb1-n(f385k"
+SECRET_KEY = (
+    "django-insecure-6n#rc)ok*uhsocqn-^1q=4ja&43a(k8yt3o-srbnb1-n(f385k"
+)
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['track-day-b7bd1e661185.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+    'track-day-b7bd1e661185.herokuapp.com',
+    '127.0.0.1',
+    'localhost',
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -89,18 +96,31 @@ DATABASES = {
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME": (
+            "django.contrib.auth.password_validation."
+            "UserAttributeSimilarityValidator"
+        ),
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME": (
+            "django.contrib.auth.password_validation."
+            "MinimumLengthValidator"
+        ),
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+        "NAME": (
+            "django.contrib.auth.password_validation."
+            "CommonPasswordValidator"
+        ),
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+        "NAME": (
+            "django.contrib.auth.password_validation."
+            "NumericPasswordValidator"
+        ),
     },
 ]
+
 
 # Internationalization
 LANGUAGE_CODE = "en-us"
@@ -117,16 +137,19 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'booking_system/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Required when DEBUG = False to avoid missing manifest errors
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STATICFILES_STORAGE = (
+    "django.contrib.staticfiles.storage."
+    "ManifestStaticFilesStorage"
+)
 
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = '/booking/my-bookings/'
-LOGIN_REDIRECT_URL = 'my_bookings' 
-LOGOUT_REDIRECT_URL = 'index'  
-LOGIN_URL = 'login'     
+LOGIN_REDIRECT_URL = 'my_bookings'
+LOGOUT_REDIRECT_URL = 'index'
+LOGIN_URL = 'login'
 
 LOGGING = {
     'version': 1,

@@ -2,10 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 
-# Create your models here.
 
 # Class race track where people can book sessions.
-
 class Track(models.Model):
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
@@ -21,9 +19,14 @@ class Track(models.Model):
 
     def __str__(self):
         return self.name
-    
+
+
 class Car(models.Model):
-    owner = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='cars')
+    owner = models.ForeignKey(
+        'auth.User',
+        on_delete=models.CASCADE,
+        related_name='cars'
+    )
     brand = models.CharField(max_length=50)
     model = models.CharField(max_length=50)
     year = models.PositiveIntegerField()
@@ -31,20 +34,30 @@ class Car(models.Model):
 
     def __str__(self):
         return f"{self.brand} {self.model} ({self.year})"
-    
+
+
 RIDE_OPTIONS = [
     ('passenger', 'Passenger Ride'),
     ('with_instructor', 'With Instructor'),
     ('without_instructor', 'Without Instructor'),
 ]
 
+
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='bookings'
+    )
     track = models.ForeignKey('Track', on_delete=models.CASCADE)
     car = models.ForeignKey('Car', on_delete=models.CASCADE)
     date = models.DateField()
     time_slot = models.CharField(max_length=20)
-    ride_option = models.CharField(max_length=20, choices=RIDE_OPTIONS, default='passenger')
+    ride_option = models.CharField(
+        max_length=20,
+        choices=RIDE_OPTIONS,
+        default='passenger'
+    )
 
     def __str__(self):
         return f"{self.user.username} - {self.track.name} on {self.date}"

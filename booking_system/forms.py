@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.utils import timezone
 
+
 TIME_CHOICES = [
     ('10:00 AM', '10:00 AM'),
     ('11:00 AM', '11:00 AM'),
@@ -15,6 +16,7 @@ TIME_CHOICES = [
     ('5:00 PM', '5:00 PM'),
     ('6:00 PM', '6:00 PM'),
 ]
+
 
 class BookingForm(forms.ModelForm):
     date = forms.DateField(
@@ -67,15 +69,14 @@ class BookingForm(forms.ModelForm):
 
             if existing.exists():
                 raise forms.ValidationError(
-                    f"{track.name} is already booked for {date} at {time_slot}."
+                    f"{track.name} is already booked for {date} at {time_slot}"
                 )
 
         return cleaned_data
-    
+
+
 class UserRegisterForm(UserCreationForm):
-    """
-    User registration form with email field.
-    """
+    """User registration form with email field."""
     email = forms.EmailField(required=True)
 
     class Meta:

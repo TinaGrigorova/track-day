@@ -165,36 +165,44 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 <summary> admin.py
 </summary>
 
-![admin.py]()
+![admin.py](booking_system/static/booking_system/images/readme_images/check_admin.png)
 </details>
 
 <details>
 <summary> forms.py
 </summary>
 
-![forms.py]()
+![forms.py](booking_system/static/booking_system/images/readme_images/check_forms.png)
 </details>
 
 <details>
 <summary> models.py
 </summary>
 
-![models.py]()
+![models.py](booking_system/static/booking_system/images/readme_images/check_models.png)
 </details>
 
 <details>
 <summary> views.py
 </summary>
 
-![views.py]()
+![views.py](booking_system/static/booking_system/images/readme_images/check_views.png)
 </details>
 
 <details>
 <summary> urls.py
 </summary>
 
-![urls.py]()
+![urls.py](booking_system/static/booking_system/images/readme_images/check_urls_booking.png)
 </details>
+
+<details>
+<summary> tests.py
+</summary>
+
+![tests.py](booking_system/static/booking_system/images/readme_images/check_tests.png)
+</details>
+
 
 #### track-day App
 
@@ -202,14 +210,14 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 <summary> settings.py
 </summary>
 
-![settings.py]()
+![settings.py](booking_system/static/booking_system/images/readme_images/check_settings.png)
 </details>
 
 <details>
 <summary> urls.py
 </summary>
 
-![urls.py]()
+![urls.py](booking_system/static/booking_system/images/readme_images/check_urls_track_day.png)
 </details>
 
 ## Lighthouse Report

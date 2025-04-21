@@ -4,13 +4,16 @@ from django.contrib import admin
 from django.contrib import admin
 from .models import Track, Car, Booking
 
+
 @admin.register(Track)
 class TrackAdmin(admin.ModelAdmin):
     list_display = ('name', 'location', 'length_km')
 
+
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
     list_display = ('brand', 'model', 'year', 'is_rental', 'owner')
+
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
