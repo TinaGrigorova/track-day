@@ -80,7 +80,10 @@ print("DEBUG DB URL:", os.environ.get("DATABASE_URL"))
 
 # Database configuration for Neon with SSL
 DATABASES = {
-'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(
+        os.environ.get("DATABASE_URL"),
+        ssl_require=True
+    )
 }
 
 # Password validation
@@ -105,10 +108,17 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Static files settings
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'booking_system/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Required when DEBUG = False to avoid missing manifest errors
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

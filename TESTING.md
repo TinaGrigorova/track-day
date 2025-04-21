@@ -12,28 +12,28 @@ The Track Day website was meticulously tested across a variety of devices and sc
 <summary> Desktop PC
 </summary>
 
-![Desktop PC](booking_system/static/booking_system/images/readme_images/.png)
+![Desktop PC]()
 </details>
 
 <details>
 <summary> Laptop
 </summary>
 
-![Laptop]()
+![Laptop](booking_system/static/booking_system/images/readme_images/laptop_view.png)
 </details>
 
 <details>
 <summary> Tablet
 </summary>
 
-![Tablet]((booking_system/static/booking_system/images/readme_images/tablet_view.png))
+![Tablet]()
 </details>
 
 <details>
 <summary> Mobile
 </summary>
 
-![Mobile]((booking_system/static/booking_system/images/readme_images/phone_view.png))
+![Mobile]()
 </details>
 
 ## Browser Compatibility Testing
