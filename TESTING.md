@@ -12,28 +12,28 @@ The Track Day website was meticulously tested across a variety of devices and sc
 <summary> Desktop PC
 </summary>
 
-![Desktop PC]()
+![Desktop PC](booking_system/static/booking_system/images/readme_images/desktop_view.png)
 </details>
 
 <details>
 <summary> Laptop
 </summary>
 
-![Laptop]()
+![Laptop](booking_system/static/booking_system/images/readme_images/laptop_view.png)
 </details>
 
 <details>
 <summary> Tablet
 </summary>
 
-![Tablet]()
+![Tablet](booking_system/static/booking_system/images/readme_images/tablet_view.png)
 </details>
 
 <details>
 <summary> Mobile
 </summary>
 
-![Mobile]()
+![Mobile](booking_system/static/booking_system/images/readme_images/phone_view.png)
 </details>
 
 ## Browser Compatibility Testing
@@ -41,31 +41,31 @@ The Track Day website was meticulously tested across a variety of devices and sc
 The Track Day website was rigorously tested across multiple web browsers to ensure consistent functionality and appearance. This testing process guarantees a smooth and uniform user experience, regardless of the browser used.​
 
 <details>
-<summary> Chrome
+<summary> Opera
 </summary>
 
-![Chrome]()
+![Chrome](booking_system/static/booking_system/images/readme_images/opera_view.png)
 </details>
 
 <details>
 <summary> Microsoft Edge
 </summary>
 
-![Microsoft Edge]()
+![Chrome](booking_system/static/booking_system/images/readme_images/edge_view.png)
 </details>
 
 <details>
 <summary> Safari
 </summary>
 
-![Safari]()
+![Safari](booking_system/static/booking_system/images/readme_images/safari_view.png)
 </details>
 
 <details>
 <summary> Iphone Internet (Mobile)
 </summary>
 
-![Iphone Internet Mobile]()
+![Iphone Internet Mobile](booking_system/static/booking_system/images/readme_images/phone_view.png)
 </details>
 
 ## Device Testing
