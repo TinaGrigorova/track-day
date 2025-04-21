@@ -117,63 +117,30 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 <summary> Home Page
 </summary>
 
-![Home Page]()
-</details>
 
-<details>
-<summary> Home Page when logged in
-</summary>
-
-![Home Page when logged in]()
+![Home Page](booking_system/static/booking_system/images/readme_images/wf_home_page.png)
 </details>
 
 <details>
 <summary> Make a Booking Page
 </summary>
+  
+![My Booking Page](booking_system/static/booking_system/images/readme_images/wf_booking_from.png)
 </details>
 
 <details>
-<summary> My Booking Page
+<summary> Booking Options
 </summary>
 
-![My Booking Page](IMG)
+![Edit Booking Options](booking_system/static/booking_system/images/readme_images/wf_booking_opt.png)
 </details>
 
 <details>
-<summary> Edit Booking Page
+<summary> Login Page
 </summary>
 
-![Edit Booking Page](IMG)
+![Delete Booking Page](booking_system/static/booking_system/images/readme_images/wf_login_page.png)
 </details>
-
-<details>
-<summary> Delete Booking Page
-</summary>
-
-![Delete Booking Page]()
-</details>
-
-<details>
-<summary> User Login Page
-</summary>
-
-![User Login Page]()
-</details>
-
----
-## 📸 Screenshots
-
-- **Homepage** – With featured tracks  
-  `booking_system/images/screenshot-homepage.png`
-
-- **All Tracks** – Grid layout with track info and "Book Track" buttons  
-  `booking_system/images/screenshot-tracks.png`
-
-- **Booking Form** – Includes date, time, car, and ride options  
-  `booking_system/images/screenshot-booking-form.png`
-
-- **My Bookings** – User view of their current reservations  
-  `booking_system/images/screenshot-my-bookings.png`
 
 ---
 
@@ -209,10 +176,10 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 ## Security Features
 
 ### User Authentication
-* Implemented using Django Allauth, providing comprehensive features for user registration, login, logout, password reset, and email verification. ​
+* Implemented using Django Allauth, providing comprehensive features for user registration, login, logout and password reset.
 
 ### Login Decorator
-* Views such as booking_create, booking_success, booking_overview, edit_booking, and delete_booking are protected using Django's @login_required decorator.
+* Views such as booking_create, booking_success, cancel_booking, edit_booking, and cancel_booking are protected using Django's @login_required decorator.
 * This ensures that only authenticated users can access booking-related functionalities.​
 
 ### CSRF Protection
@@ -243,52 +210,157 @@ The Track Day Booking website features a bold and sporty aesthetic that mirrors 
 ### Existing Features
 
 * Home Page
-  
+  * Serves as the landing page where users are introduced to the Track Day service.
+  * Contents:
+Hero header with background image and headline.
+Featured Tracks section with a few highlighted racing circuits.
+Introduction or promotional text.
+CTA (Call to Action) buttons directing users to booking or track details.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/main_page_upper.png)
   ![Home Page](booking_system/static/booking_system/images/readme_images/main_page_lower.png)
   
 * Navigation Bar
+  * Present on every page to allow seamless navigation.
+  * Contents:
+Links to: Home, About, All Tracks, Login/Logout, Sign Up.
+If logged in: Dropdown with "My Bookings", "Book Track", and "Logout"
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/nav_bar.png)
+
 * Futured Tracks Cards
+  * Display 3 popular tracks on the homepage with summary and image.
+  * Contents:
+Each card includes the track name, short description, and a “Book Track” button.
+Leads to dedicated detail pages or booking.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/feautured_tracks.png)
+  
   * Lydden Hill Track
+     - Show details for Lydden Hill circuit.
+     - Contents:
+Background story, track stats, map image, and “Book Now” CTA.
+Description of its history and unique features.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/lydden_hill_page.png)
+
   * Brans Hatch Track
+    - Show details for Brands Hatch circuit.
+    - Contents:
+Overview, technical highlights, image, and booking button.
+Emphasis on its popularity in British motorsport.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/brands_hatch_page.png)
+
   * Silverstone Track
+    - Show details for Silverstone circuit.
+    - Contents:
+Historic insights, layout, speed characteristics, and booking link.
+Known as the home of British racing.
+
    ![Home Page](booking_system/static/booking_system/images/readme_images/silverstone_page.png)
+
 * All Tracks
+  * Display a full list of all available tracks with booking options.
+  * Contents:
+Cards for every available track (including featured ones and others like Cadwell, Thruxton, Castle Combe, etc.).
+Description, image, and “Book Track” button for each.
+Great overview for users to compare and decide.
+
   ![All tracks](booking_system/static/booking_system/images/readme_images/all_tracks_page.png)
+  
 * Booking Page
-  ![Home Page](booking_system/images/readme_images/booking_form.png)
+  * Allow users to book a track session.
+  * Contents:
+Form for selecting track, car, date, time slot, and ride option.
+Responsive validation and error messages.
+Only visible to logged-in users.
+
+  ![Home Page](booking_system/static/booking_system/images/readme_images/booking_form.png)
+  
   * Booking Options:
+    
   * Car Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/cars_options.png)
+    
   * Ride Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/ride_options.png)
+    
   * Time Slot
     ![Home Page](booking_system/static/booking_system/images/readme_images/time_slot.png)
+    
   * Track Option
     ![Home Page](booking_system/static/booking_system/images/readme_images/tracks_options.png)
+    
   * Calendar 
    ![Home Page](booking_system/static/booking_system/images/readme_images/booking_calendar.png)
+
 * Edit Booking
+  *  Let users change the details of an existing booking.
+  * Contents:
+Pre-filled form for editing track, car, date, time, and ride.
+Prevents booking conflicts and invalid input.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/edit_booking.png)
+  
 * Cancel Booking
+  * Confirm and process cancellation of a booking.
+  * Contents:
+Displays booking info with a “Confirm Delete” and “Cancel” button.
+Confirmation message upon deletion.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/cancel_booking.png)
+  
 * My Bookings
+  *  Let users view all their past and upcoming bookings.
+  * Contents:
+Table with booking details (track, date, time, car, ride type).
+Edit and Cancel buttons.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/my_bookings.png)
+  
 * Login Page
+  * Allow returning users to log into their account.
+  * Contents:
+Email and password fields.
+Redirects to dashboard or intended page.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/login_page.png)
+  
 * Sign Up Page
+  * Register new users.
+  * Contents:
+Username, email, and password fields.
+Redirects and logs in user upon successful registration.
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/signup_page.png)
+  
 * Confirmation Messages
+  * Notify user of success during form submission/cancellation.
+  
   ![Home Page](booking_system/static/booking_system/images/readme_images/update_msg.png)
   ![Home Page](booking_system/static/booking_system/images/readme_images/cancel_msg.png)
+  ![Home Page](booking_system/static/booking_system/images/readme_images/successful_msg.png)
+  
 * Information Part
+  * Provides users with extra content 
   ![Home Page](booking_system/static/booking_system/images/readme_images/desctiprion.png)
+  
 * Footer
+  * Located at the bottom of every page.
+  * Contents:
+Copyright
+
   ![Home Page](booking_system/static/booking_system/images/readme_images/footer.png)
+
+  
+## Future Enhancements
+
+- Stripe integration for paid bookings
+- Track day gift cards
+- Admin calendar for track slot availability
+- Booking confirmation email
+- User reviews on each track experience
 
   
 ---
@@ -423,14 +495,6 @@ Testing was performed manually and via Django’s built-in testing tools.
 * I would like to thank my mentor for support and feedback throughout this project, Mitko Bachvarov.
 * I would also like to extend my appreciation to the Slack community for their continuous engagement and willingness to share knowledge. The collaborative environment provided a platform for learning, troubleshooting, and gaining inspiration from fellow developers.
 
-
-
-## Future Enhancements
-
-- Stripe integration for paid bookings
-- Track day gift cards
-- Admin calendar for track slot availability
-- Booking confirmation email
 
 
 
