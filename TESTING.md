@@ -41,7 +41,7 @@ The Track Day website was meticulously tested across a variety of devices and sc
 The Track Day website was rigorously tested across multiple web browsers to ensure consistent functionality and appearance. This testing process guarantees a smooth and uniform user experience, regardless of the browser used.​
 
 <details>
-<summary> Chrome
+<summary> Opera
 </summary>
 
 ![Chrome]()
