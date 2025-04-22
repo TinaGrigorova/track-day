@@ -329,7 +329,7 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 |                     | Only change ride/car option and submit           | Booking updates successfully                                 | ✅ PASS |
 |                     | Submit conflicting time/date                     | Validation error                                              | ✅ PASS |
 | **All Tracks**      | Hover card                                       | Show full description overlay                                | ✅ PASS |
-|                     | Click Book Track                                 | Redirects to Book page with selhttps://github.com/TinaGrigorova/track-day/blob/main/TESTING.mdected track                   | ✅ PASS |
+|                     | Click Book Track                                 | Redirects to Book page                   | ✅ PASS |
 | **Track Detail Pages** | View track info                              | Track information and gallery loads                          | ✅ PASS |
 |                     | Click Book this Track                            | Redirect to booking form                                     | ✅ PASS |
 |                     | Click Back                                       | Returns to homepage                                          | ✅ PASS |
