@@ -65,7 +65,7 @@ The Track Day website was rigorously tested across multiple web browsers to ensu
 <summary> Iphone Internet (Mobile)
 </summary>
 
-![Iphone Internet Mobile](booking_system/static/booking_system/images/readme_images/phone_view.png)
+![Iphone Internet Mobile](booking_system/static/booking_system/images/readme_images/phone_view.PNG)
 </details>
 
 ## Device Testing
