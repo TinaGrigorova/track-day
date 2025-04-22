@@ -405,6 +405,7 @@ Copyright
 * [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
 * [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python
 * [Colormind](http://colormind.io/) - Color Scheme
+* [Brands Hatch](https://www.brandshatch.co.uk), [Silverstone](https://www.silverstone.co.uk) and [Lydden Hill](https://lyddenhill.co.uk) - Additional Images 
 
 ---
 ## Deployment and Local Developement
