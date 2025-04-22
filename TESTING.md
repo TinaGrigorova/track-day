@@ -265,7 +265,7 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 </summary>
 
 
-![Booking Overview Page](booking_system/static/booking_system/images/readme_images/lighthouse_my_boikin.png)
+![Booking Overview Page](booking_system/static/booking_system/images/readme_images/lighthouse_my_bookings.png)
 </details>
 
 <details>
