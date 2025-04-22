@@ -353,6 +353,10 @@ Copyright
 
   ![Home Page](booking_system/static/booking_system/images/readme_images/footer.png)
 
+* Error 500
+
+  ![Error](booking_system/static/booking_system/images/readme_images/error_500.png)
+
   
 ## Future Enhancements
 
