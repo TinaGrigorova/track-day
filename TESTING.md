@@ -26,14 +26,14 @@ The Track Day website was meticulously tested across a variety of devices and sc
 <summary> Tablet
 </summary>
 
-![Tablet](booking_system/static/booking_system/images/readme_images/tablet_view.png)
+![Tablet](booking_system/static/booking_system/images/readme_images/tablet_view.jpeg)
 </details>
 
 <details>
 <summary> Mobile
 </summary>
 
-![Mobile](booking_system/static/booking_system/images/readme_images/phone_view.png)
+![Mobile](booking_system/static/booking_system/images/readme_images/phone_view.PNG)
 </details>
 
 ## Browser Compatibility Testing
@@ -226,7 +226,7 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 <summary> Home Page
 </summary>
 
-![Home Page]()
+![Home Page](booking_system/static/booking_system/images/readme_images/lighthouse_home_page.png)
 </details>
 
 
@@ -234,14 +234,14 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 <summary> Sign Up Page
 </summary>
 
-![Sign Up Page]()
+![Sign Up Page](booking_system/static/booking_system/images/readme_images/lighthouse_signup.png)
 </details>
 
 <details>
 <summary> Login Page
 </summary>
 
-![Login Page]()
+![Login Page](booking_system/static/booking_system/images/readme_images/lighthouse_login.png)
 </details>
 
 
@@ -249,7 +249,7 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 <summary> All Tracks Page
 </summary>
 
-![Browse Tracks]()
+![Browse Tracks](booking_system/static/booking_system/images/readme_images/lighthouse_all_tracks.png)
 </details>
 
 <details>
@@ -257,21 +257,29 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 </summary>
 
 
-![Booking Overview Page]()
+![Booking Overview Page](booking_system/static/booking_system/images/readme_images/lighthouse_make_booking.png)
+</details>
+
+<details>
+<summary> My Bookings
+</summary>
+
+
+![Booking Overview Page](booking_system/static/booking_system/images/readme_images/lighthouse_my_boikin.png)
 </details>
 
 <details>
 <summary> Edit Booking Page
 </summary>
   
-![Edit Booking Page]()
+![Edit Booking Page](booking_system/static/booking_system/images/readme_images/lighthouse_edit.png)
 </details>
 
 <details>
 <summary> Delete Booking Page
 </summary>
 
-![Delete Booking Page]()
+![Delete Booking Page](booking_system/static/booking_system/images/readme_images/lighthouse_cancel.png)
 </details>
 
 ## Bugs

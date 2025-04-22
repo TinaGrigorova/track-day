@@ -30,7 +30,7 @@ SECRET_KEY = (
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'track-day-b7bd1e661185.herokuapp.com',
