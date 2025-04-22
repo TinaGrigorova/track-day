@@ -76,8 +76,19 @@ class BookingForm(forms.ModelForm):
 
 
 class UserRegisterForm(UserCreationForm):
-    """User registration form with email field."""
     email = forms.EmailField(required=True)
+    
+    password1 = forms.CharField(
+        label="Password",
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        help_text="Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, one number, and one special character."
+    )
+
+    password2 = forms.CharField(
+        label="Confirm Password",
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        help_text="Enter the same password as above, for verification."
+    )
 
     class Meta:
         model = User
