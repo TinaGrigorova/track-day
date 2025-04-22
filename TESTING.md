@@ -286,10 +286,13 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 
 ### Resolved Bugs
 
-
-
-
-
+| Bug                                       | Fix                                                                                                          |
+|:------------------------------------------|:-------------------------------------------------------------------------------------------------------------|
+| Cannot edit only ride option              | Updated form logic to mark the form as changed even when only 'ride_option' is altered.                      |
+| Car change not saving                     | Modified the form validation to properly detect and accept car-only changes by adjusting clean method.       |
+| Favicon missing in production             | Ran `collectstatic`, confirmed favicon.ico is in staticfiles, ensured correct path and debug=False behavior. |
+| Neon DB SSL connection error              | Appended `?sslmode=require` to DATABASE_URL in `env.py` and ensured secure connection settings.              |
+| Static files not loading with DEBUG=False | Configured `STATICFILES_STORAGE` and verified manifest entries are generated correctly.                      |
 
 ## Features Testing
  
