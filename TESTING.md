@@ -142,7 +142,7 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 </details>
 
 <details>
-<summary>  Silverstone 
+<summary>  Brands Hatch 
 </summary>
 
 ![Silverstone Page](booking_system/static/booking_system/images/readme_images/html_check_brandshatch.png)
