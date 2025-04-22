@@ -154,7 +154,7 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 <summary> Custom CSS (style.css)
 </summary>
 
-![Custom CSS (style.css)]()
+![Custom CSS (style.css)](booking_system/static/booking_system/images/readme_images/css_validation.png)
 </details>
 
 ### Python
@@ -355,18 +355,7 @@ Device testing was conducted on a variety of phone models, including Iphone 11, 
 #### 5. **Authentication**
 - Booking page is protected: redirects unauthenticated users to login
 
-### ❌ Bugs Identified and Fixed
-
-| Issue | Resolution |
-|------|------------|
-| Changing only ride option didn’t save | Adjusted form validation to allow same-time edits |
-| Booking page accessible without login | Wrapped view in `@login_required` |
-| Error pages weren’t rendering | Defined handlers in `urls.py` and created templates |
-
-## Automated Testing (Planned)
-- Coverage with `pytest-django`
-- Model testing for Booking, Track, and Car
-- Form validation tests
+Return to [README](README.md)
 
 ---
 
