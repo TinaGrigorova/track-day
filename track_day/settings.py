@@ -15,6 +15,8 @@ import os
 import dj_database_url
 import logging
 import sys
+from decouple import config
+import dj_database_url
 
 # Load environment variables from env.py if it exists
 if os.path.isfile('env.py'):
@@ -24,9 +26,8 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = (
-    "django-insecure-6n#rc)ok*uhsocqn-^1q=4ja&43a(k8yt3o-srbnb1-n(f385k"
-)
+
+SECRET_KEY = config('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -83,15 +84,30 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "track_day.wsgi.application"
 
-print("DEBUG DB URL:", os.environ.get("DATABASE_URL"))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Database configuration for Neon with SSL
-DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get("DATABASE_URL"),
-        ssl_require=True
-    )
-}
+# Secret key and debug
+SECRET_KEY = config('SECRET_KEY', default='your-dev-secret-key')
+DEBUG = config('DEBUG', default=False, cast=bool)
+
+# Allow all for dev (adjust in production)
+ALLOWED_HOSTS = ['*']
+
+# DATABASE SETUP
+db_url = config('DATABASE_URL', default=None)
+
+if db_url:
+    DATABASES = {
+        'default': dj_database_url.parse(db_url, conn_max_age=600)
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
